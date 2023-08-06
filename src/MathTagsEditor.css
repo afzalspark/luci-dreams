@@ -1,0 +1,18 @@
+.editable-container {
+  width: 100%;
+  border: 1px solid #ccc;
+  padding: 8px;
+  border-radius: 4px;
+  outline: none;
+}
+
+.tags-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.MuiChip-root {
+  background-color: #f0f0f0;
+}
