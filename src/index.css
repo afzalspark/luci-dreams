@@ -11,3 +11,13 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.MuiChip-root:has(.plus), .MuiChip-label:has(.plus) {
+  padding: 0!important;
+  margin: 0!important;
+  background-color: white;
+}
+
+.MuiChip-root:has(.plus) svg{
+  display: none;
+}

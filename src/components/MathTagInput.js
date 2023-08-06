@@ -24,12 +24,25 @@ const TagsInput = () => {
       event.key === "/" ||
       event.key === "(" ||
       event.key === ")"
-    ) {
-      setInputValue((prevValue) => prevValue + event.key);
-      event.preventDefault(); // Prevent the character from being inserted in the input field
+    ) { 
+        setInputValue("");
+        setTags([...tags, event.key]);   
+        event.preventDefault();     
     } else if (event.key === "Backspace" && inputValue === "") {
       setTags(tags.slice(0, tags.length - 1));
     }
+  };
+
+  const getOptionLabel = (option) => {
+    if ( option === "+" ||
+          option === "-" ||
+          option === "*" ||
+          option === "/" ||
+          option === "(" ||
+          option === ")") {
+      return <span className={"plus"}>{option}</span>;
+    }
+    return option;
   };
 
   return (
@@ -39,6 +52,7 @@ const TagsInput = () => {
       freeSolo
       value={tags}
       inputValue={inputValue}
+      getOptionLabel={getOptionLabel}
       onChange={(event, value) => setTags(value)}
       onInputChange={handleInputChange}
       onKeyDown={handleInputKeyDown}
