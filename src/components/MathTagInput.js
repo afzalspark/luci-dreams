@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Autocomplete from "@mui/material/Autocomplete";
 import TextField from "@mui/material/TextField";
+import { options } from "./options"
 
 const TagsInput = () => {
   const [tags, setTags] = useState([]);
@@ -48,7 +49,7 @@ const TagsInput = () => {
   return (
     <Autocomplete
       multiple
-      options={['one', 'two', 'four', 'six']}
+      options={options}
       freeSolo
       value={tags}
       inputValue={inputValue}
