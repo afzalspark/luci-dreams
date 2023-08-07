@@ -57,6 +57,7 @@ const TagsInput = () => {
       onChange={(event, value) => setTags(value)}
       onInputChange={handleInputChange}
       onKeyDown={handleInputKeyDown}
+      isOptionEqualToValue={() => false}
       renderInput={(params) => (
         <TextField {...params} variant="outlined" label="Tags" />
       )}
